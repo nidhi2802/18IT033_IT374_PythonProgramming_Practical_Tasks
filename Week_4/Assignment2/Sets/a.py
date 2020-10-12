@@ -1,0 +1,6 @@
+fruit = set()
+fruit.add("Apple")
+fruit.update(["Banana", "Mango"])
+print("Before clear: ", fruit)
+fruit.clear()
+print("After clear: ", fruit)

@@ -1,0 +1,8 @@
+fruit = set()
+fruit.add("Apple")
+fruit.update(["Banana", "Mango"])
+print("Before remove: ", fruit)
+fruit.discard("Kiwi")
+print("After remove Kiwi: ", fruit)
+fruit.discard("Mango")
+print("After remove Mango: ", fruit)
