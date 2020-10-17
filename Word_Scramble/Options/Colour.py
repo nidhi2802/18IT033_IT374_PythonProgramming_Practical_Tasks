@@ -29,7 +29,7 @@ def main():
         get_input.delete(0, END)
         ans_lab.configure(text="")
 
-    def cheak():
+    def check():
         global points, ran_num
         user_word = get_input.get().upper()
         if user_word == COLOUR_ANSWER[ran_num]:
