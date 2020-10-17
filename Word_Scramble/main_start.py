@@ -131,7 +131,7 @@ def start_main_page():
 
     main_window.geometry("500x500+500+150")
     main_window.resizable(0, 0)
-    main_window.title("Quizee --> Grow your kids with Quizee")
+    main_window.title("Quizee  Let's guess some words")
     main_window.configure(background="#e6fff5")
     main_window.iconbitmap(r'quizee_logo_.ico')
 
