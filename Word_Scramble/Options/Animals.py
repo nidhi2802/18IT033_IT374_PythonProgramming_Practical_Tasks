@@ -28,26 +28,26 @@ def main():
         get_input.delete(0, END)
         ans_lab.configure(text="")
 
-    def cheak():
+    def check():
         global points, ran_num
         user_word = get_input.get().upper()
         if user_word == ANIMALS_ANSWER[ran_num]:
             points += 5
-            score.configure(text="Score:- " + str(points))
-            messagebox.showinfo('correct', "Correct Answer.. Keep it Up!")
+            score.configure(text="Score: " + str(points))
+            messagebox.showinfo('Correct', "Correct Answer!")
             ran_num = randrange(0, (len(ANIMALS_WORD)))
             word.configure(text=ANIMALS_WORD[ran_num])
             get_input.delete(0, END)
             ans_lab.configure(text="")
         else:
-            messagebox.showerror("Error", "Incorrect Answer..Try your best!")
+            messagebox.showerror("Error", "Incorrect Answer! Try again")
             get_input.delete(0, END)
 
     def show_answer():
         global points
-        if points > 4:
-            points -= 5
-            score.configure(text="Score:- " + str(points))
+        if points > 0:
+            points -= 1
+            score.configure(text="Score: " + str(points))
             time.sleep(0.5)
             ans_lab.configure(text=ANIMALS_ANSWER[ran_num])
         else:
@@ -56,7 +56,7 @@ def main():
     my_window = Tk()
     my_window.geometry("500x500+500+150")
     my_window.resizable(0, 0)
-    my_window.title("Quizee-Animals_jumbled_words ")
+    my_window.title("Quizee-Guess the Animals ")
     my_window.configure(background="#e6fff5")
     my_window.iconbitmap(r'quizee_logo_.ico')
     img1 = PhotoImage(file="back.png")
@@ -103,7 +103,7 @@ def main():
         font=("", 13),
         fg="#000000",
         bg="#99ffd6",
-        command=cheak,
+        command=check,
     )
     submit.pack(pady=(10, 20))
 
