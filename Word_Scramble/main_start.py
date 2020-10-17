@@ -131,7 +131,7 @@ def start_main_page():
 
     main_window.geometry("500x500+500+150")
     main_window.resizable(0, 0)
-    main_window.title("Quizee--Let's Guess some words")
+    main_window.title("Quizee --> Grow your kids with Quizee")
     main_window.configure(background="#e6fff5")
     main_window.iconbitmap(r'quizee_logo_.ico')
 
@@ -140,8 +140,10 @@ def start_main_page():
 
     lab_img = Label(
         main_window,
-        text="Word Scramble",
+        text="Word\nScramble",
+        fg='#26a69a',
         bg='#e6fff5',
+        font="Titillium  50 bold"
     )
     lab_img.pack(pady=(50, 0))
 
